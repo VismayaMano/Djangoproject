@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+
+    {% for msg in messages %}
+    {{msg}}
+    {% endfor %}
+    
+                 <div class="container">
+                    <div class="row">
+                        <div class="col-sm-4">
+                          <img src="{{ user.Photo.url }}" alt=""> </div><br>
+                        <div class="col-sm-4">
+                          <h2><b>{{user.Name}}<br></b></h2>
+                          {{user.Brand}}<br>
+                          {{user.Model}} <br>
+                          {{user.Price}} <br>
+                          {{user.Engine}} <br></div>
+                    </div>
+                 </div>
+     
+
+{% endblock %}
